@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/CSS/style.css" />
+        <title>Juego de Ahorcado</title>
+    </head>
+    <body>
+
+        <img src="./images/Logo.png" alt="imagen de logo" class="logo">
+
+        <div class="home">
+            <button class="btn_iniciar_juego">Iniciar Juego</button>
+            <button class="btn_agregar_palabra">Agregar nueva palabra</button>
+        </div>
+
+        <form class="form_agregar_palabra oculto">
+            <input type="text" placeholder="Ingrese una palabra"
+                class="input_agregar">
+
+            <p class="advertencia"><img src="./images/Simbolo.png" alt="imagen
+                    simbolo de
+                    advertencia">Máx. de 8 letras</p>
+
+            <button class="btn_guardar_empezar">Guardar Empezar</button>
+            <button class="btn_cancelar">Cancelar</button>
+        </form>
+
+        <section class="contenedor_juego oculto">
+            <div class="munieco_ahorcado">
+                <div class="base_horca"></div>
+                <div class="palo_vertical"></div>
+                <div class="palo_horizontal"></div>
+                <div class="soga"></div>
+                <div class="cabeza oculto"></div>
+                <div class="cuerpo oculto"></div>
+                <div class="mano_izquierda oculto"></div>
+                <div class="mano_derecha oculto"></div>
+                <div class="pierna_izquierda oculto"></div>
+                <div class="pierna_derecha oculto"></div>
+            </div>
+            <span class="mensaje oculto"></span>
+            <div class="letras_presionadas">
+                <div class="contenedor_letras_acertadas">
+                    <!-- <span class="letra_acertada"></span>
+                    <span class="letra_acertada"></span>
+                    <span class="letra_acertada"></span>
+                    <span class="letra_acertada"></span> -->
+                </div>
+
+                <div class="contenedor_letras_equivocadas">
+                    <!-- <span class="letra_equivocada">e</span>
+                    <span class="letra_equivocada">e</span>
+                    <span class="letra_equivocada">e</span> -->
+                </div>
+            </div>
+
+            <div class="contenedor_botones_juego">
+                <button class="btn_nuevo_juego">Nuevo Juego</button>
+                <button class="btn_desistir">Desistir</button>
+            </div>
+        </section>
+
+        <script src="./assets/JS/main.js"></script>
+        <script src="./assets/JS/juego.js"></script>
+        <script src="./assets/JS/inicio.js"></script>
+        <script src="./assets/JS/agrepar_palabra.js"></script>
+    </body>
+</html>

@@ -1,0 +1,475 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: #E5E5E5;
+}
+
+.logo {
+    margin: 40px 0 0 50px;
+}
+
+
+/*------------------Botones de inicio------------------*/
+.btn_iniciar_juego {
+    width: 250px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0A3871;
+    color: #ffffff;
+    margin: 170px auto;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    border: none;
+}
+
+.btn_iniciar_juego:hover {
+    background: #1b4f8f;
+    cursor: pointer;
+}
+
+.btn_agregar_palabra {
+    width: 220px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: #0A3871;
+    margin: 0 auto;
+    border: 1px solid #0A3871;
+    border-radius: 14px;
+}
+
+.btn_agregar_palabra:hover {
+    color: #2e6bb5;
+    border: 1px solid #2e6bb5;
+    cursor: pointer;
+}
+
+
+/*-----------Formulario agregar letra-----------*/
+.form_agregar_palabra {
+    width: 600px;
+    height: 350px;
+    padding: 15px 0 0 10px;
+    margin: 80px auto;
+}
+
+.input_agregar {
+    font-size: 22px;
+    background: transparent;
+    color: #0A3871;
+    border: none;
+    outline: none;
+}
+
+.input_agregar::placeholder {
+    color: #0A3871;
+}
+
+.input_agregar:hover::placeholder {
+    opacity: .6;
+}
+
+.advertencia {
+    position: relative;
+    top: 160px;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+.advertencia img {
+    width: 10px;
+    margin-right: 4px;
+}
+
+.btn_guardar_empezar {
+    position: relative;
+    top: 170px;
+    width: 230px;
+    height: 40px;
+    background-color: #0A3871;
+    color: #ffffff;
+    border-radius: 15px;
+    border: none;
+    margin-right: 20px;
+}
+
+.btn_guardar_empezar:hover {
+    background-color: #154a8a;
+    cursor: pointer;
+}
+
+.btn_cancelar {
+    position: relative;
+    top: 170px;
+    width: 230px;
+    height: 40px;
+    background-color: transparent;
+    color: #0A3871;
+    border-radius: 15px;
+    border: 1px solid #0A3871;
+}
+
+.btn_cancelar:hover {
+    border: 1px solid #225da5;
+    color: #225da5;
+    cursor: pointer;
+}
+
+
+/*---------------Juego-------------*/
+.contenedor_juego {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*---------------muñeco ahorcado--------------*/
+.munieco_ahorcado {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto 20px auto;
+}
+
+.base_horca {
+    position: relative;
+    top: 260px;
+    left: 60px;
+    width: 270px;
+    height: 2px;
+    border: 3px solid #0A3871;
+    border-radius: 20px;
+}
+
+.palo_vertical {
+    position: relative;
+    top: 30px;
+    left: 90px;
+    width: 2px;
+    height: 230px;
+    border: 3px solid #0A3871;
+    border-radius: 20px;
+}
+
+.palo_horizontal {
+    position: relative;
+    bottom: 200px;
+    left: 90px;
+    width: 200px;
+    height: 2px;
+    border: 3px solid #0A3871;
+    border-radius: 20px;
+}
+
+.soga {
+    position: relative;
+    bottom: 205px;
+    left: 284px;
+    width: 2px;
+    height: 36px;
+    border: 3px solid #0A3871;
+    border-radius: 20px;
+}
+
+.cabeza {
+    position: relative;
+    bottom: 207px;
+    left: 267px;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #0A3871;
+    border-radius: 50%;
+}
+
+.cuerpo {
+    position: relative;
+    bottom: 210px;
+    left: 286px;
+    width: 2px;
+    height: 80px;
+    border: 2px solid #0A3871;
+    border-radius: 20px;
+}
+
+.mano_izquierda {
+    position: relative;
+    bottom: 290px;
+    left: 274px;
+    width: 2px;
+    height: 40px;
+    background-color: #0A3871;
+    border: 2px solid #0A3871;
+    border-radius: 20px;
+    transform: rotate(40deg);
+}
+
+.mano_derecha {
+    position: relative;
+    bottom: 330px;
+    left: 298px;
+    width: 2px;
+    height: 40px;
+    background-color: #0A3871;
+    border: 2px solid #0A3871;
+    border-radius: 20px;
+    transform: rotate(-40deg);
+}
+
+.pierna_izquierda {
+    position: relative;
+    bottom: 298px;
+    left: 277px;
+    width: 2px;
+    height: 40px;
+    background-color: #0A3871;
+    border: 2px solid #0A3871;
+    border-radius: 20px;
+    transform: rotate(30deg);
+}
+
+.pierna_derecha {
+    position: relative;
+    bottom: 338px;
+    left: 295px;
+    width: 2px;
+    height: 40px;
+    background-color: #0A3871;
+    border: 2px solid #0A3871;
+    border-radius: 20px;
+    transform: rotate(-30deg);
+}
+
+.mensaje {
+    position: absolute;
+    bottom: 350px;
+    left: 850px;
+    font-size: 30px;
+}
+
+/*------------------letras presionadas y botones-------------------*/
+.letras_presionadas {
+    width: max-content;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.contenedor_letras_acertadas {
+    margin: 0 auto;
+    width: auto;
+}
+
+.letra_acertada {
+    text-align: center;
+    font-size: 28px;
+    background-color: transparent;
+    color: #0A3871;
+    padding: 0 16px 3px 16px;
+    margin-right: 8px;
+    border-bottom: 3px solid #0A3871;
+}
+
+.contenedor_letras_equivocadas {
+    margin: 20px auto 0 auto;
+    width: auto;
+    overflow: auto;
+}
+
+.letra_equivocada {
+    font-size: 20px;
+    margin: 0 12px 0 0;
+    opacity: 0.9;
+}
+
+.contenedor_botones_juego {
+    width: max-content;
+    margin: 20px auto 0 auto;
+}
+
+.btn_nuevo_juego {
+    width: 210px;
+    height: 40px;
+    background-color: #0A3871;
+    color: #E5E5E5;
+    margin-right: 15px;
+    border: none;
+    border-radius: 15px;
+}
+
+.btn_desistir {
+    width: 210px;
+    height: 40px;
+    background-color: transparent;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 15px;
+}
+
+.oculto {
+    display: none;
+}
+
+
+@media screen and (max-width:768px) {
+    .logo {
+        width: 20px;
+        margin: 40px 0 0 50px;
+    }
+
+    .form_agregar_palabra {
+        width: 100%;
+        height: 330px;
+        padding: 0;
+    }
+
+    .input_agregar {
+        font-size: 20px;
+        margin-left: 5%;
+    }
+
+    .advertencia {
+        top: 160px;
+        font-size: 11px;
+        margin-left: 5%;
+    }
+
+    .advertencia img {
+        width: 8px;
+    }
+
+    .btn_guardar_empezar {
+        top: 170px;
+        width: 90%;
+        height: 50px;
+        font-size: 18px;
+        margin: 0 5%;
+        border-radius: 10px;
+    }
+
+    .btn_cancelar {
+        top: 170px;
+        width: 90%;
+        height: 50px;
+        font-size: 18px;
+        margin: 8px 5%;
+        border-radius: 10px;
+    }
+
+    /*------------muñeco ahorcado------------*/
+    .munieco_ahorcado {
+        width: 90%;
+        height: 40vh;
+    }
+
+    .base_horca {
+        top: 240px;
+        left: 60px;
+        width: 210px;
+    }
+
+    .palo_vertical {
+        top: 35px;
+        height: 200px;
+    }
+
+    .palo_horizontal {
+        bottom: 165px;
+        width: 160px;
+    }
+
+    .soga {
+        bottom: 171px;
+        left: 245px;
+        height: 30px;
+    }
+
+    .cabeza {
+        bottom: 174px;
+        left: 229px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .cuerpo {
+        bottom: 177px;
+        left: 245.5px;
+        height: 50px;
+    }
+
+    .mano_izquierda {
+        bottom: 228px;
+        left: 238px;
+        height: 30px;
+        transform: rotate(30deg);
+    }
+
+    .mano_derecha {
+        bottom: 256px;
+        left: 253px;
+        height: 27px;
+        transform: rotate(-30deg);
+    }
+
+    .pierna_izquierda {
+        bottom: 240px;
+        left: 238px;
+        height: 30px;
+        transform: rotate(25deg);
+    }
+
+    .pierna_derecha {
+        bottom: 270px;
+        left: 252px;
+        height: 30px;
+        transform: rotate(-25deg);
+    }
+
+    .mensaje {
+        position: relative;
+        top: 0;
+        left: 83px;
+        font-size: 25px;
+    }
+
+    .letras_presionadas {
+        max-width: 100%;
+        overflow: scroll;
+    }
+
+    .letra_acertada {
+        font-size: 23px;
+        padding: 0 10px 3px 10px;
+        margin-right: 5px;
+    }
+
+    .contenedor_botones_juego {
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn_nuevo_juego {
+        width: 90%;
+        height: 50px;
+        margin-bottom: 10px;
+        margin-right: 0;
+        border-radius: 10px;
+    }
+
+    .btn_desistir {
+        width: 90%;
+        height: 50px;
+        border-radius: 10px;
+    }
+}
