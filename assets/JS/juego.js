@@ -20,9 +20,6 @@ const contenedor_teclado = document.querySelector(".contenedor_teclado");
 contenedor_teclado.addEventListener("click", function (event) {
     event.preventDefault();
 
-    // var presionada = event.target.innerHTML;
-    // console.log(presionada);
-
     if (contenedor_juego.classList == "contenedor_juego oculto") return;
 
     if (palabras_presionadas.includes(event.target.textContent)) return;
@@ -33,8 +30,6 @@ contenedor_teclado.addEventListener("click", function (event) {
 });
 
 document.addEventListener("keydown", function (event) {
-
-    // recibirLetra(event.key);
 
     if (contenedor_juego.classList == "contenedor_juego oculto") return;
 
@@ -62,15 +57,3 @@ btn_desistir.addEventListener("click", function (event) {
     contenedor_juego.classList.add("oculto");
     home.classList.remove("oculto");
 });
-
-function recibirLetra(letra) {
-
-    if (contenedor_juego.classList == "contenedor_juego oculto") return;
-
-    if (palabras_presionadas.includes(letra)) return;
-
-    if (!verificarLetra(letra)) return;
-    insertarLetra(letra.toUpperCase());
-    palabras_presionadas.push(letra.toUpperCase());
-    mostrarMensaje();
-}

@@ -134,8 +134,9 @@ body {
 /*---------------muñeco ahorcado--------------*/
 .munieco_ahorcado {
     width: 400px;
-    height: 300px;
+    height: 330px;
     margin: 0 auto 20px auto;
+    text-align: center;
 }
 
 .base_horca {
@@ -146,6 +147,7 @@ body {
     height: 2px;
     border: 3px solid #0A3871;
     border-radius: 20px;
+    margin: 0;
 }
 
 .palo_vertical {
@@ -247,9 +249,7 @@ body {
 }
 
 .mensaje {
-    position: absolute;
-    bottom: 350px;
-    left: 850px;
+    position: relative;
     font-size: 30px;
 }
 
@@ -368,6 +368,7 @@ body {
     .munieco_ahorcado {
         width: 90%;
         height: 40vh;
+        margin-top: 20px;
     }
 
     .base_horca {
@@ -433,11 +434,11 @@ body {
         transform: rotate(-25deg);
     }
 
-    .mensaje {
+    /* .mensaje {
         position: static;
         margin: 17%;
         font-size: 25px;
-    }
+    } */
 
     .letras_presionadas {
         max-width: 100%;

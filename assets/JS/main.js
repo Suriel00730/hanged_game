@@ -97,7 +97,7 @@ function mostrarMensaje() {
 
     if (letras_equivocadas.length == munieco_ahorcado.length) {
         mensaje.classList.remove("oculto");
-        mensaje.textContent = "Fin del juego!"
+        mensaje.textContent = "Fin del juego"
         mensaje.style.color = "red";
     }
 }
@@ -129,3 +129,11 @@ function palabraRandom() {
     var rand = Math.floor(Math.random() * lista_palabras.length);
     aleatoria = lista_palabras[rand];
 }
+
+// setInterval(function () {
+//     mensaje.classList.add("oculto");
+//     mensaje.classList.remove("oculto");
+//     mensaje.textContent = "Ganaste, !"
+//     mensaje.style.color = "green";
+//     console.log("funciona")
+// }, 1000);
