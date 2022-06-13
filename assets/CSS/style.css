@@ -421,7 +421,7 @@ body {
 
     .pierna_izquierda {
         bottom: 240px;
-        left: 238px;
+        left: 240px;
         height: 30px;
         transform: rotate(25deg);
     }
@@ -449,6 +449,34 @@ body {
         font-size: 23px;
         padding: 0 10px 3px 10px;
         margin-right: 5px;
+    }
+
+    .contenedor_teclado {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        border: 1px solid black;
+        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        background-color: #0a38714e;
+        border: 2px solid #0A3871;
+        border-radius: 10px;
+    }
+
+    .contenedor_teclado li {
+        width: 39px;
+        height: 40px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 25px;
+        color: #0A3871;
+        background-color: #E5E5E5;
+        padding-top: 5px;
+        margin: 3px;
+        border-radius: 5px;
+        border: 1px solid #0A3871;
     }
 
     .contenedor_botones_juego {
