@@ -434,9 +434,8 @@ body {
     }
 
     .mensaje {
-        position: relative;
-        top: 0;
-        left: 83px;
+        position: static;
+        margin: 17%;
         font-size: 25px;
     }
 
@@ -466,8 +465,8 @@ body {
     }
 
     .contenedor_teclado li {
-        width: 39px;
-        height: 40px;
+        width: 12.4%;
+        height: 15%;
         text-align: center;
         font-weight: bold;
         font-size: 25px;
