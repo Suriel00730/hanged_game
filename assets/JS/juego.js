@@ -24,6 +24,7 @@ contenedor_teclado.addEventListener("click", function (event) {
 
     if (palabras_presionadas.includes(event.target.textContent)) return;
 
+    if (!verificarLetra(event.target.textContent)) return;
     insertarLetra(event.target.innerHTML.toUpperCase());
     palabras_presionadas.push(event.target.innerHTML.toUpperCase());
     mostrarMensaje();

@@ -76,7 +76,7 @@ function crearSpanLetraEquivocada(letra) {
 // funcion para verificar si es un caracter valido.
 function verificarLetra(letra) {
 
-    return letras_permitidas.includes(letra);
+    return letras_permitidas.includes(letra.toLowerCase());
 }
 
 
