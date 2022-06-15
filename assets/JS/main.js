@@ -5,6 +5,7 @@ const contenedor_juego = document.querySelector(".contenedor_juego");
 const contenedor_letras_acertadas = document.querySelector(".contenedor_letras_acertadas");
 const contenedor_letras_equivocadas = document.querySelector(".contenedor_letras_equivocadas");
 const mensaje = document.querySelector(".mensaje");
+const palabra_correcta = document.querySelector(".palabra_correcta");
 
 var letras_equivocadas = [];
 var letras_acertadas = 0;
@@ -89,6 +90,7 @@ function dibujarAhorcado() {
 
 function mostrarMensaje() {
     const espacios = document.querySelectorAll(".letra_acertada");
+
     if (espacios.length == letras_acertadas) {
         mensaje.classList.remove("oculto");
         mensaje.textContent = "Ganaste, Felicidades!"
@@ -99,6 +101,9 @@ function mostrarMensaje() {
         mensaje.classList.remove("oculto");
         mensaje.textContent = "Fin del juego"
         mensaje.style.color = "red";
+
+        palabra_correcta.classList.remove("oculto");
+        palabra_correcta.textContent = `Palabra Correcta: ${aleatoria}`;
     }
 }
 
@@ -123,17 +128,11 @@ function limpiarJuego() {
     palabras_presionadas = [];
     letras_acertadas = 0;
     mensaje.classList.add("oculto");
+    palabra_correcta.classList.add("oculto");
+
 }
 
 function palabraRandom() {
     var rand = Math.floor(Math.random() * lista_palabras.length);
     aleatoria = lista_palabras[rand];
 }
-
-// setInterval(function () {
-//     mensaje.classList.add("oculto");
-//     mensaje.classList.remove("oculto");
-//     mensaje.textContent = "Ganaste, !"
-//     mensaje.style.color = "green";
-//     console.log("funciona")
-// }, 1000);

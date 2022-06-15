@@ -249,8 +249,12 @@ body {
 }
 
 .mensaje {
-    position: relative;
     font-size: 30px;
+}
+
+.palabra_correcta {
+    color: green;
+    font-size: 18px;
 }
 
 /*------------------letras presionadas y botones-------------------*/
